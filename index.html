@@ -4,168 +4,115 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>jiji & pat library website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+      defer
+    ></script>
   </head>
   <body>
-    <nav class="navbar">
-      <div class="nav-logo"><img src="images/logo.png" alt="logo" /></div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#schedule">Schedule</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark"
+      style="background-color: var(--accent)"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#home">
+          <img
+            src="images/navbrand-transparent.png"
+            alt="jiji & pat"
+            height="60"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#favorite">Favorite</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
-    <section class="hero-container">
-      <div class="hero-content">
-        <h1>Welcome<br />to our<br />Website!</h1>
-        <h2 class="hero-description">
-          Hi! this is our made cutie website, enjoy!!
-        </h2>
-        <button class="get-started">Get Started</button>
-      </div>
-    </section>
-
-    <main class="main-wrapper">
-      <section class="section-card">
-        <h2>Meet Our Team</h2>
-        <div class="container">
-          <div class="img">
-            <img
-              src="images/patrcia.jpg"
-              alt="si pat to"
-              class="team-img"
-              width="220"
-              height="280"
-            />
-            <h3 class="team-name">patricia</h3>
-          </div>
-          <div class="img">
-            <img
-              src="images/jiji.jpg"
-              alt="si jiji to"
-              class="team-img"
-              width="220"
-              height="280"
-            />
-            <h3 class="team-name">jissirel</h3>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" class="section-card">
-        <h2>About Us</h2>
-        <div class="container">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis,
-            distinctio consequuntur placeat perspiciatis optio blanditiis
-            exercitationem dolore explicabo commodi quaerat magnam nulla laborum
-            rem, asperiores veritatis, voluptates aut a nihil.
-          </p>
-        </div>
-      </section>
-
-      <section id="team" class="section-card">
-        <h2>Our Favorite</h2>
-        <div class="container">
-          <table border="1">
-            <tr>
-              <th>FOOD</th>
-              <th>COLOR</th>
-              <th>HOBBY</th>
-            </tr>
-            <tr>
-              <td>9:00 AM</td>
-              <td>Team Meeting</td>
-              <td>alam mo ha</td>
-            </tr>
-            <tr>
-              <td>2:00 PM</td>
-              <td>Project Review</td>
-              <td>bakit?</td>
-            </tr>
-            <tr>
-              <td>ano</td>
-              <td>anue</td>
-              <td>aneh?</td>
-            </tr>
-          </table>
-        </div>
-      </section>
-
-      <section class="section-card">
-        <h2>About jiji</h2>
-        <div class="container">
-          <p>Add content about jiji here</p>
-        </div>
-      </section>
-
-      <section id="contact" class="section-card">
-        <h2>Contact Us</h2>
-        <div class="contact-form">
-          <form>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="fname">First Name</label>
-                <input
-                  type="text"
-                  id="fname"
-                  name="fname"
-                  placeholder="Juan"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="lname">Last Name</label>
-                <input
-                  type="text"
-                  id="lname"
-                  name="lname"
-                  placeholder="Dela Cruz"
-                  required
-                />
+    <main>
+      <section class="main-hero">
+        <div class="container my-0 my-lg-5">
+          <div
+            style="
+              padding-top: 60px !important;
+              padding-bottom: 20px !important;
+            "
+            class="row p-2 p-lg-4 pb-0 pt-lg-5 align-items-center rounded-3 shadow-lg overflow-hidden"
+          >
+            <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+              <h1 class="hero-title display-4 fw-bold lh-1 text-body-emphasis">
+                Hi there! Welcome.
+              </h1>
+              <p class="lead">
+                This is our cute strawberry-themed website, created to meet the
+                Web Technologies (WebTech) project requirements. We hope you
+                enjoy exploring!
+              </p>
+              <div
+                class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3"
+              >
+                <button
+                  type="button"
+                  class="btn btn-primary btn-lg px-4 me-md-2 fw-bold"
+                >
+                  Get Started
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-primary btn-lg px-4"
+                >
+                  Contact
+                </button>
               </div>
             </div>
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="juan@email.com"
-                required
+            <div class="col-lg-5 p-0 d-flex pb-4">
+              <img
+                class="w-100 h-auto"
+                src="/images/hero-imagetablet.png"
+                alt="strawberry and ribbon"
+                style="object-fit: cover; height: 100%"
               />
             </div>
-            <div class="form-group">
-              <label for="subject">Subject</label>
-              <select id="subject" name="subject">
-                <option value="">Select a topic</option>
-                <option>Project Inquiry</option>
-                <option>Collaboration</option>
-                <option>General Question</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Write your message here..."
-              ></textarea>
-            </div>
-            <button type="submit" class="btn">Send Message</button>
-          </form>
+          </div>
         </div>
       </section>
     </main>
-
-    <footer>
-      <p>
-        Made with care by <a href="#team">jiji & pat</a> - Library Website
-        &copy; 2026
-      </p>
-    </footer>
   </body>
 </html>

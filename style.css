@@ -2,22 +2,48 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Poppins', sans-serif !important;
   scroll-behavior: smooth;
 }
 
 :root {
-  --accent: #720e0ed0;
-  --accent2: #720e0ed0;
-  --bg: #e4aa92;
+  --accent: #720e0eff;
+  --accent2: #720e0eff;
+  --bg: #fbcbcb;
   --card: hwb(38 64% 4% / 0.97);
-  --text: #111;
   --muted: #0f3400;
   --border: rgba(0, 0, 0, 0.1);
+  --text: #462727;
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: var(--accent2) !important;
+  border-color: var(--accent2) !important;
+  font-size: 1rem !important;
+  transition: all 0.3s ease !important;
+}
+.btn-primary:hover {
+  scale: 1.02;
+}
+.btn-outline-primary {
+  color: var(--accent2) !important;
+  border-color: var(--accent2) !important;
+  font-size: 1rem !important;
+  transition: all 0.3s ease !important;
+}
+.btn-outline-primary:hover {
+  background-color: var(--accent2) !important;
+  color: #fff !important;
+  border-color: var(--accent2) !important;
+  scale: 1.02;
 }
 
 body {
-  background-color: var(--bg);
+  background-color: var(--bg) !important;
+  background-image: url('images/strawberry-doodle-soft-pink-bg-transparent.png');
+  background-size: auto;
+  background-repeat: repeat;
   color: var(--text);
   line-height: 1.6;
 }
@@ -27,66 +53,54 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  display: flex !important;
-  width: 100% !important;
-  height: 60px;
-  justify-content: space-between !important;
-  align-items: center !important;
-  background-color: var(--accent);
-  padding: 0 20px !important;
-  box-sizing: border-box !important;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
-.nav-logo img,
-header img {
-  max-height: 200px;
+.navbar-brand img {
+  max-height: 60px;
   width: auto;
   object-fit: contain;
-  /* POSITIONING ADJUSTMENTS*/
-  margin-top: 26px;
-  margin-left: 0;
-  margin-right: auto !important;
 }
 
-header,
-nav,
-.logo-container {
-  justify-content: flex-start !important;
-  padding-left: 10px !important;
-}
-
-.nav ul {
-  display: flex;
-  gap: 24px;
-  list-style: none;
-}
-
-.nav-logo {
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 1.5rem;
-}
-
-.nav-links a {
-  color: #e0dcd3;
-  text-decoration: none;
+.navbar-nav .nav-link {
+  color: #e0dcd3 !important;
   font-weight: 500;
+  margin-left: 1rem;
   transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: #fff;
+.navbar-nav .nav-link:hover {
+  color: #fff !important;
+}
+
+/* Mobile Navbar Separator Lines */
+@media (max-width: 991.98px) {
+  .navbar-nav .nav-item {
+    border-bottom: 1px solid #c1bdbd;
+  }
+
+  .navbar-nav .nav-item:last-child {
+    border-bottom: none;
+  }
+
+  /* Mobile Hero Row Spacing */
+  .hero-row {
+    padding-top: 60px !important;
+    padding-bottom: 20px !important;
+  }
 }
 
 /* =======================Navbar Design======================= */
+
+.main-hero .container {
+  background: var(--bg);
+}
+h1.hero-title {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  margin-right: 20px;
+  color: #462727 !important;
+}
 
 /* =======================Hero Unit======================= */
 .hero {
@@ -96,17 +110,17 @@ nav,
   padding: 4rem 1rem;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
+.hero-container h1 {
+  font-size: 3.5rem;
   margin-bottom: 0.5rem;
   margin-right: 20px;
-  font-family: monospace;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.hero p {
+.hero-description h2 {
   font-size: 1.2rem;
   opacity: 0.9;
-  font-family: monospace;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 /* =======================Hero Unit======================= */
@@ -310,3 +324,113 @@ footer a {
   color: #fff;
   font-weight: 600;
 }
+
+/* =======================Poppins Font Classes======================= */
+.poppins-thin {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+/* =======================Poppins Font Classes======================= */
