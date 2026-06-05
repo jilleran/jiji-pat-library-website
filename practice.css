@@ -1,0 +1,31 @@
+body {
+  background: pink;
+}
+.title {
+  color: red;
+  font-size: 52px;
+  background: white;
+  text-align: right;
+}
+.test {
+  color: blueviolet;
+  font-size: 13px;
+}
+
+.link-container {
+  text-align: center;
+}
+.link {
+  color: black;
+  text-decoration: none;
+  background: gray;
+}
+.message-container {
+  text-align: center;
+}
+.message {
+  color: green;
+}
+.text {
+  color: red;
+}
