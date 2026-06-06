@@ -146,6 +146,21 @@ h1.hero-title {
 }
 
 /* =======================Profile Hover Cards======================= */
+.about-strawberry-bg {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: bottom;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.15;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 .profile-divider {
   width: 2px;
   height: 300px;
