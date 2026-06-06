@@ -85,6 +85,20 @@ h1.hero-title {
   color: #462727 !important;
 }
 
+h3.hero-subtitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--maroon-main);
+  margin-bottom: 0.2rem;
+}
+
+h4.hero-course {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
 .about-content {
   text-align: center;
 }
@@ -143,6 +157,34 @@ h1.hero-title {
   box-shadow: 0 2px 10px rgba(189, 156, 156, 0.15);
   background-color: var(--maroon-main) !important;
   color: #e0dcd3 !important;
+}
+
+/* =======================Education Table======================= */
+.edu-table {
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.edu-table th,
+.edu-table td {
+  padding: 0.6rem 0.9rem;
+  border: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.edu-table thead tr {
+  background-color: var(--maroon-main);
+  color: #fff;
+}
+
+.edu-table tbody tr:nth-child(even) {
+  background-color: rgba(114, 14, 14, 0.06);
+}
+
+.edu-table td:first-child {
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--maroon-main);
 }
 
 /* =======================Profile Hover Cards======================= */
