@@ -144,3 +144,93 @@ h1.hero-title {
   background-color: var(--maroon-main) !important;
   color: #e0dcd3 !important;
 }
+
+/* =======================Profile Hover Cards======================= */
+.profile-divider {
+  width: 2px;
+  height: 300px;
+  background: rgba(114, 14, 14, 0.25);
+  border-radius: 2px;
+}
+.profile-card {
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  box-shadow: none;
+  background: transparent;
+  width: 230px;
+  padding: 0;
+  transition:
+    width 0.4s ease,
+    box-shadow 0.4s ease,
+    background 0.4s ease;
+  cursor: pointer;
+}
+
+.profile-card:hover {
+  width: 490px;
+  background: var(--card);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Patricia: info left, image right */
+.profile-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.profile-img {
+  width: 230px;
+  min-width: 230px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  flex-shrink: 0;
+  border-radius: 16px 0 0 16px;
+}
+
+.profile-card.reverse .profile-img {
+  border-radius: 0 16px 16px 0;
+}
+
+.profile-info {
+  width: 260px;
+  flex-shrink: 0;
+  padding: 1.2rem 1rem;
+  opacity: 0;
+  transform: translateX(20px);
+  transition:
+    opacity 0.15s ease 0s,
+    transform 0.15s ease 0s;
+  text-align: left;
+  overflow: hidden;
+  max-height: 300px;
+}
+
+.profile-card.reverse .profile-info {
+  transform: translateX(-20px);
+  padding-left: 1.5rem;
+}
+
+.profile-card:hover .profile-info {
+  opacity: 1;
+  transform: translateX(0);
+  transition:
+    opacity 0.3s ease 0.25s,
+    transform 0.3s ease 0.25s;
+}
+
+.profile-info h5 {
+  color: var(--maroon-main);
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.profile-info .bio {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile-info p {
+  font-size: 0.82rem;
+  margin-bottom: 0.3rem;
+}
