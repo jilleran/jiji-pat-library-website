@@ -7,40 +7,17 @@
 }
 
 :root {
-  --accent: #720e0eff;
-  --accent2: #720e0eff;
-  --bg: #fbcbcb;
+  --maroon-main: #720e0eff;
+  --maroon-secondary: #720e0eff;
+  --pink-background: #fbcbcb;
   --card: hwb(38 64% 4% / 0.97);
   --muted: #0f3400;
   --border: rgba(0, 0, 0, 0.1);
   --text: #462727;
 }
 
-/* Button Styles */
-.btn-primary {
-  background-color: var(--accent2) !important;
-  border-color: var(--accent2) !important;
-  font-size: 1rem !important;
-  transition: all 0.3s ease !important;
-}
-.btn-primary:hover {
-  scale: 1.02;
-}
-.btn-outline-primary {
-  color: var(--accent2) !important;
-  border-color: var(--accent2) !important;
-  font-size: 1rem !important;
-  transition: all 0.3s ease !important;
-}
-.btn-outline-primary:hover {
-  background-color: var(--accent2) !important;
-  color: #fff !important;
-  border-color: var(--accent2) !important;
-  scale: 1.02;
-}
-
 body {
-  background-color: var(--bg) !important;
+  background-color: var(--pink-background);
   background-image: url('images/strawberry-doodle-soft-pink-bg-transparent.png');
   background-size: auto;
   background-repeat: repeat;
@@ -54,6 +31,7 @@ body {
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  background-color: var(--maroon-main);
 }
 
 .navbar-brand img {
@@ -92,8 +70,13 @@ body {
 
 /* =======================Navbar Design======================= */
 
-.main-hero .container {
-  background: var(--bg);
+/* =======================Hero Section======================= */
+.section-design .container {
+  background: var(--pink-background);
+}
+.section-content {
+  padding-top: 60px !important;
+  padding-bottom: 20px !important;
 }
 h1.hero-title {
   font-size: 3.5rem;
@@ -102,335 +85,62 @@ h1.hero-title {
   color: #462727 !important;
 }
 
-/* =======================Hero Unit======================= */
-.hero {
-  background: (#e4aa92, #e4aa92);
-  color: #720e0ed0;
+.about-content {
   text-align: center;
-  padding: 4rem 1rem;
+}
+/* =======================Hero Section======================= */
+
+.contact {
+  background: var(--pink-background);
+  text-decoration: dashed !important;
 }
 
-.hero-container h1 {
-  font-size: 3.5rem;
-  margin-bottom: 0.5rem;
-  margin-right: 20px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+/* =======================boostrap override Styles======================= */
+.btn-primary {
+  background-color: var(--maroon-secondary) !important;
+  border-color: var(--maroon-secondary) !important;
+  font-size: 1rem !important;
+  transition: all 0.3s ease !important;
+}
+.btn-primary:hover {
+  scale: 1.02;
+}
+.btn-outline-primary {
+  background-color: transparent;
+  color: var(--maroon-secondary) !important;
+  border-color: var(--maroon-secondary) !important;
+  font-size: 1rem !important;
+  transition: all 0.3s ease !important;
+}
+.btn-outline-primary:hover {
+  background-color: var(--maroon-secondary) !important;
+  color: #fff !important;
+  border-color: var(--maroon-secondary) !important;
+  scale: 1.02;
 }
 
-.hero-description h2 {
-  font-size: 1.2rem;
-  opacity: 0.9;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-/* =======================Hero Unit======================= */
-
-/* Structural Wrapper & Cards */
-.main-wrapper {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+.bg-white {
+  background-color: #f4ecb3;
+  transition: all 0.3s ease !important;
 }
 
 .section-card {
-  background: var(--card);
-  padding: 2.5rem;
-  margin-bottom: 2rem;
-  width: 1000px;
-  max-width: 120%;
-  height: auto;
-  min-height: 90px;
-  box-shadow: 0 4px 6px rgba(164, 59, 59, 0.87);
+  background-color: var(--pink-background);
+}
+.btn btn-primary:hover {
+  scale: 1.02;
 }
 
-.section-card h2 {
-  color: var(--accent);
-  margin-bottom: 1rem;
-  position: relative;
-  padding-bottom: 0.5rem;
-  font-family: 'Times New Roman', Times, serif;
-}
-
-.section-card h2::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 50px;
-  height: 3px;
-  background: var(--accent2);
-}
-
-/* Team Component (Side-by-Side) */
-.container {
-  display: flex;
-  justify-content: right;
-  gap: 2.5rem;
-  margin-top: 1.5rem;
-  margin-left: 10.5rem;
-  flex-wrap: wrap; /* Wraps on mobile responsive */
-}
-
-.img {
+/* =======================boostrap override Styles======================= */
+.team-content {
   text-align: center;
 }
-
-.img img {
-  border-radius: 10px;
-}
-
-.team-img {
-  object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.team-img:hover {
-  transform: translateY(-5px);
-}
-
-.team-name {
-  margin-top: 0.75rem;
-  font-weight: 600;
-  color: var(--accent);
-  text-transform: capitalize;
-}
-
-/* Modern Form Elements */
-.contact-form {
-  margin-top: 1.5rem;
-}
-
-.form-row {
-  display: flex;
-  gap: 1rem;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1.25rem;
-  flex: 1;
-}
-
-label {
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin-bottom: 0.4rem;
-  color: var(--accent);
-}
-
-input,
-select,
-textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid var(--border);
-  background-color: #fafafa;
-  font-size: 0.95rem;
-  color: var(--text);
-  transition: border-color 0.3s ease;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-  outline: none;
-  border-color: var(--accent2);
-  background-color: #fff;
-}
-
-textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-.btn {
-  background-color: var(--accent2);
-  color: white;
-  border: none;
-  padding: 0.85rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #573915;
-}
-
-table {
-  width: 100%;
-  max-width: 900px;
-  margin: 24px auto;
-  border: bold;
-}
-td,
-th {
-  padding: 14px 20px;
-  text-allign: left;
-  border:
-    1px,
-    solid #573915;
-}
-/* =======================Floating Social Media Icons======================= */
-/* Floating Right Sidebar Layout */
-.social-media {
-  position: fixed;
-  top: 80%;
-  right: 20px; /* Distance from the right screen edge */
-  transform: translateY(-50%); /* Centers it vertically on the screen */
-  display: flex;
-  flex-direction: column; /* Stacks the icons vertically */
-  gap: 15px; /* Space between links */
-  z-index: 9999; /* Ensures it stays on top of other elements */
-}
-
-/* Individual Link Layout */
-.social-link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  color: var(--text, #111);
-  font-size: 0.8rem;
-  font-weight: 500;
-  transition: transform 0.2s ease;
-}
-
-.social-link:hover {
-  transform: scale(1.1); /* Adds subtle pop effect on hover */
-}
-
-/* Icon Sizing */
-.social-icon {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
-  margin-bottom: 4px;
-}
-
-/* Footer Style */
-footer {
+/* =======================footer======================= */
+.footer {
   text-align: center;
-  padding: 2rem;
-  color: white;
-  background-color: var(--accent);
-  margin-top: 4rem;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(189, 156, 156, 0.15);
+  background-color: var(--maroon-main) !important;
+  color: #e0dcd3 !important;
 }
-
-footer a {
-  color: #fff;
-  font-weight: 600;
-}
-
-/* =======================Poppins Font Classes======================= */
-.poppins-thin {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.poppins-extralight {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 200;
-  font-style: normal;
-}
-
-.poppins-light {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.poppins-regular {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.poppins-medium {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.poppins-semibold {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.poppins-bold {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.poppins-extrabold {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 800;
-  font-style: normal;
-}
-
-.poppins-black {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.poppins-thin-italic {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.poppins-extralight-italic {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 200;
-  font-style: italic;
-}
-
-.poppins-light-italic {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.poppins-regular-italic {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.poppins-medium-italic {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.poppins-semibold-italic {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-style: italic;
-}
-
-.poppins-bold-italic {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.poppins-extrabold-italic {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 800;
-  font-style: italic;
-}
-
-.poppins-black-italic {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 900;
-  font-style: italic;
-}
-/* =======================Poppins Font Classes======================= */
