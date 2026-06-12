@@ -184,7 +184,7 @@ h4.hero-course {
 }
 /* =======================footer======================= */
 .site-footer {
-  background-color: #130c0c;
+  background-color: #720e0eff;
   color: #e0dcd3;
 }
 
@@ -239,6 +239,7 @@ h4.hero-course {
   display: block;
 }
 
+/* =======================Table form======================= */
 .edu-strawberry-bg {
   position: absolute;
   bottom: -30px;
